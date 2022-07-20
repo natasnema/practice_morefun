@@ -1,0 +1,758 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+// header ------------------------------------------------------------
+
+header {
+    float: left;
+    width: 100%;
+    height: 18.75rem;
+
+    .nav-bar {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1rem;
+
+        .nav-menu {
+            width: calc(50% - 12rem);
+            height: 45%;
+            border-bottom: 2px solid white;
+            display: flex;
+            justify-content: space-between;
+            margin: 2rem;
+            padding: 1rem;
+            padding-top: 1rem;
+            padding-bottom: 0.5rem;
+
+            .nav-page {
+                font-size: 1.5rem;
+                color: white;
+            }
+
+            .nav-icons {
+                display: flex;
+                justify-content: space-around;
+
+                .nav-icon {
+                    width: 2rem;
+                    height: 2rem;
+                }
+
+                .nav-fb {
+                    background-image: url(./img/icon/FBicon.svg);
+                }
+
+                .nav-yt {
+                    margin-left: 2rem;
+                    margin-right: 2rem;
+                    background-image: url(./img/icon/YTicon.svg);
+                }
+
+                .nav-ct {
+                    background-image: url(./img/icon/CTicon.svg);
+                }
+            }
+        }
+
+        .nav-logo {
+            width: 12rem;
+            height: 12rem;
+            background-image: url(./img/icon/logo.svg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .nac-con {
+        display: none;
+    }
+
+    .nav-con {
+        width: 100%;
+        height: 8rem;
+        position: fixed;
+        top: 85%;
+        left: 90%;
+        opacity: 70%;
+        z-index: 2;
+
+        .nac-title {
+            position: absolute;
+            color: black;
+            font-size: 1.5rem;
+            top: 53%;
+            left: -5%;
+            z-index: 3;
+        }
+
+        .nac-logogroup {
+            width: 6.25rem;
+            height: 6.25rem;
+            position: relative;
+            filter: drop-shadow(10px 5px 5px black);
+
+            .nac-icons {
+
+                .nac-icon {
+                    width: 3.25rem;
+                    height: 3.25rem;
+                    display: block;
+                    border-radius: 999rem;
+                    background-color: #fff;
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 2;
+                }
+
+                .nac-fb {
+                    left: 75%;
+                    top: -25%;
+
+                    img {
+                        width: 3rem;
+                        height: 3rem;
+                    }
+                }
+
+                .nac-yt {
+                    left: 95%;
+                    top: 25%;
+
+                    img {
+                        width: 3rem;
+                        height: 3rem;
+                    }
+                }
+
+                .nac-ct {
+                    left: 75%;
+                    top: 75%;
+
+                    img {
+                        width: 3rem;
+                        height: 3rem;
+                    }
+                }
+            }
+
+            .nac-bar {
+                width: 65rem;
+                height: 2rem;
+                background-color: #fff;
+                position: absolute;
+                top: 68%;
+                left: -986%;
+                z-index: 2;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                color: black;
+                clip-path: polygon(85% 0, 100% 0, 100% 100%, 80% 100%);
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+
+            }
+
+            .nac-logo {
+                width: 6.25rem;
+                height: 6.25rem;
+                background-image: url(./img/icon/logo.svg);
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                z-index: 5;
+                position: absolute;
+            }
+        }
+    }
+
+    .nav-con:hover .nac-bar {
+        clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%);
+        transition: 1s;
+    }
+}
+
+.nac-story {
+    display: none;
+}
+
+.nac-news {
+    display: none;
+}
+
+.nac-games {
+    display: none;
+}
+
+.nac-contact {
+    display: none;
+}
+
+.nac-partner {
+    display: none;
+}
+
+.nac-icons {
+    opacity: 0;    
+}
+
+.nav-con:hover .nac-title {
+    display: none;
+}
+
+.nav-con:hover .nac-icons {
+    opacity: 100%;
+    transition: 1s;
+}
+
+.nav-con:hover .nac-story {
+    display: block;
+}
+
+.nav-con:hover .nac-news {
+    display: block;
+}
+
+.nav-con:hover .nac-games {
+    display: block;
+}
+
+.nav-con:hover .nac-contact {
+    display: block;
+}
+
+.nav-con:hover .nac-partner {
+    display: block;
+}
+
+// banner ------------------------------------------------------------   
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/photo/banner1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .banner-title {
+        font-size: 2rem;
+        padding: 1rem;
+        background-color: #fff;
+        border-radius: 1rem;
+        opacity: 0.5;
+        position: absolute;
+        top: 70%;
+        left: 10%;
+    }
+}
+
+// story ------------------------------------------------------------
+
+.story {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    .about {
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+
+        .about-title {
+            margin: auto;
+            text-align: center;
+            font-size: 3.75rem;
+            color: #fff;
+            padding-top: 14rem;
+        }
+
+        .about-txt {
+            margin: auto;
+            margin-top: 7rem;
+            text-align: center;
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        .about-pic {
+            width: 28rem;
+            height: 15rem;
+            background-image: url(./img/photo/tbd.jpg);
+            border-radius: 1rem;
+            margin: auto;
+            margin-top: 3rem;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .about-l {
+        width: 100%;
+        height: 100vh;
+        background: radial-gradient(circle closest-corner at left, grey 20rem, black ); 
+        position: absolute;
+        top: calc(50% - 50vh);
+        left: 70%;
+        clip-path: polygon(15% 0, 100% 0, 100% 100%, 25% 100%);
+    }
+
+    .about-l:hover {
+        left: 0%;
+        transition: 1s;
+    }
+
+    .about-r {
+        width: 100%;
+        height: 100vh;
+        background: radial-gradient(circle closest-corner at right, grey 20rem, black );
+        position: absolute;
+        top: calc(50% - 50vh);
+        right: 70%;
+        clip-path: polygon(0 0, 75% 0, 85% 100%, 0 100%);
+    }
+
+    .about-r:hover {
+        right: 0%;
+        transition: 1s;
+    }
+}
+
+// news ------------------------------------------------------------
+
+.news {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .swiper-pagination-bullet {
+        display: none;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        width: 30%;
+        height: 100px;
+        display: inline-block;
+        opacity: 0;
+    }
+}
+
+// games ------------------------------------------------------------
+
+.games {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+
+    .games-menu {
+        width: 100%;
+        height: 14.5rem;
+        display: flex;
+        justify-content: center;
+
+        .games-card {
+            width: 65px;
+            height: 90px;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+        .hotgame {
+            background-image: url(./img/games/熱門遊戲.png);
+            margin-top: 7rem;
+            transform: rotate(-60deg);
+        }
+
+        .geekgame {
+            background-image: url(./img/games/玩家遊戲.png);
+            margin-top: 2rem;
+            transform: rotate(-30deg);
+        }
+
+        .famgame {
+            background-image: url(./img/games/家庭遊戲.png);
+            margin-top: 1rem;
+        }
+
+        .kidgame {
+            background-image: url(./img/games/兒童遊戲.png);
+            margin-top: 2rem;
+            transform: rotate(30deg);
+        }
+
+        .allgame {
+            background-image: url(./img/games/全部遊戲.png);
+            margin-top: 7rem;
+            transform: rotate(60deg);
+        }
+    }
+
+    .swiper {
+        width: 100%;
+        height: calc(100% - 14.5rem);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        height: calc((100% - 30px) / 2) !important;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    .swiper-pagination {
+        display: none;
+    }
+}
+
+// contact ------------------------------------------------------------
+
+.contact {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/photo/BGT.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .store {
+        width: 35%;
+        height: 90vh;
+        margin-right: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .store-pics {
+            width: 35vw;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .store-pic {
+                width: 200px;
+                height: 200px;
+                margin-bottom: 1rem;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .store-pic01 {
+                background-image: url(./img/photo/shop01.png);
+            }
+
+            .store-pic02 {
+                background-image: url(./img/photo/shop02.png);
+            }
+
+            .store-pic03 {
+                background-image: url(./img/photo/shop03.png);
+            }
+
+            .store-pic04 {
+                background-image: url(./img/photo/shop04.png);
+            }
+
+            .store-pic05 {
+                background-image: url(./img/photo/shop05.png);
+            }
+
+            .store-pic06 {
+                background-image: url(./img/photo/shop06.png);
+            }
+
+            .store-pic07 {
+                background-image: url(./img/photo/shop07.png);
+            }
+
+            .store-pic08 {
+                background-image: url(./img/photo/shop08.png);
+            }
+
+            .store-pic09 {
+                background-image: url(./img/photo/shop09.png);
+            }
+        }
+
+        .store-map {
+            width: 100%;
+            height: 15rem;
+            background-color: black;
+        }
+
+        .store-info {
+            width: 100%;
+            text-align: center;
+            margin-top: 1rem;
+            color: #fff;
+        }
+    }
+
+    .form {
+        width: calc(35% - 7rem);
+        height: calc(90vh - 4rem);
+        margin-left: 2rem;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 0.5rem;
+        padding: 2rem;
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+
+        .form-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-txt {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-info {
+            width: calc(100% - 2rem);
+            height: 2.5rem;
+            border-radius: 0.5rem;
+            border: 0px;
+            margin-bottom: 2rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .form-text {
+            width: calc(100% - 2rem);
+            height: 22rem;
+            border-radius: 0.5rem;
+            border: 0px;
+            margin-bottom: 2rem;
+            padding: 1rem;
+        }
+
+        .form-ok {
+            display: flex;
+            justify-content: flex-end;
+
+            .form-btn {
+                width: 6.25rem;
+                height: 3rem;
+                background-color: #fff;
+                border: 0px;
+                border-radius: 0.5rem;
+            }
+        }
+    }
+}
+
+// partner ------------------------------------------------------------
+
+.partner {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/photo/BGD.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .club {
+        width: 35%;
+        height: 90vh;
+        margin-right: 2rem;
+
+        .club-pic {
+            width: 100%;
+            height: 90%;
+            background-image: url(./img/photo/class.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .club-txt {
+            width: 8.75rem;
+            height: 3.75rem;
+            font-size: 2rem;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .firm {
+        width: 35%;
+        height: 90vh;
+        margin-left: 2rem;
+
+        .firm-pics {
+            width: 100%;
+            height: calc(90% + 1rem);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            .firm-pic {
+                width: 30%;
+                height: calc(25% - 1rem);
+                margin-bottom: 1rem;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .firm-txt {
+            width: 8.75rem;
+            height: 3.75rem;
+            font-size: 2rem;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+// footer ------------------------------------------------------------
+
+footer {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .footer-logo {
+        width: 20rem;
+        height: 20rem;
+        border-radius: 999rem;
+        margin-bottom: 5rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .footer-icons {
+        width: 100%;
+        height: 10rem;
+        display: flex;
+        justify-content: center;
+
+        .footer-icon {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 999rem;
+        }
+
+        .footer-fb {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .footer-yt {
+            margin-left: 8.75rem;
+            margin-right: 8.75rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .footer-ct {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
